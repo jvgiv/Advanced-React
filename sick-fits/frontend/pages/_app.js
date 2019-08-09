@@ -1,5 +1,5 @@
 import App, { Container } from 'next/app'
-
+import Page from '../components/Page'
 import React, { Component } from 'react'
 
 export default class MyApp extends App {
@@ -7,7 +7,9 @@ export default class MyApp extends App {
         const { Component } = this.props
         return (
             <Container>
-                <p>Hey I'm on every page.</p>
+                <Page>
+                    <Component />
+                </Page>
             </Container>
         )
     }
